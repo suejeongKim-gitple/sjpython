@@ -128,3 +128,27 @@ def main():
 main()
 
 #보고 해석해볼것 https://bumcrush.tistory.com/116
+
+
+    '''
+    df 랑 상관없이
+result= {"date" : date_text , "title":title_text ,  "source" : source_text ,"contents": contents_text ,"link":link_text }
+이게 값이 비어있어요
+웹 페이지 자체에서 추출하는 로직이 안맞는듯 한데
+최초 https://search.naver.com/search.naver?where=news&query=챗봇&sort=0&ds=2021.01.29&de=202[…]01.29&nso=so%3Ar%2Cp%3Afrom20210129to20210129%2Ca%3A&start=1 검색 url 이 이건데
+첫번째 for 문에서
+#<a>태그에서 제목과 링크주소 추출
+        atags = soup.select('._sp_each_title')
+        for atag in atags:
+            title_text.append(atag.text)     #제목
+            link_text.append(atag['href'])   #링크주소
+        print(page, title_text, link_text)
+print 문 추가했는데
+값이 다 비어있어요
+즉, 제목 추출하는 부분이 잘 못 되었을듯
+네이버 검색 결과 페이지 형태가 바뀌었을 확률이;
+atags = soup.select('._sp_each_title')
+select 가 바뀌었으니 여기서부터 다시 분석~
+    '''
+
+
