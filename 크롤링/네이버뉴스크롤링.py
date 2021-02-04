@@ -151,4 +151,19 @@ atags = soup.select('._sp_each_title')
 select 가 바뀌었으니 여기서부터 다시 분석~
     '''
 
-
+# news_list = soup.select('#main_pack > section.sc_new.sp_nnews._prs_nws > div > div.group_news > ul > li')
+#         for news in news_list:
+#             #<a>태그에서 제목과 링크주소 추출
+#             atag = news.select_one("div.news_wrap.api_ani_send > div > a")            
+#             title_text.append(atag["title"])
+#             link_text.append(atag["href"])
+#             #신문사 추출
+#             source = news.select_one("div.news_wrap.api_ani_send > div > div.news_info > div > a.info.press")    
+#             source_text.append(source.text)
+#             #날짜 추출
+#             # date = news.select_one("div.news_wrap.api_ani_send > div > div.news_info > div > span")      
+#             # date_cleansing(date.text)  #날짜 정제 함수사용
+#             #본문요약본
+#             content = news.select_one("div.news_wrap.api_ani_send > div > div.news_dsc > div > a")
+#             contents_cleansing(content) #본문요약 정제화
+#result= {"date" : date_text , "title":title_text ,  "source" : source_text ,"contents": contents_text ,"link":link_text } 여기서 date는 빼거나, 그냥 날짜 정제 안하고 그대로 값을 넣어야할듯
